@@ -3,6 +3,7 @@ import mediapipe as mp
 import time
 import math
 
+
 class PoseDetector:
 
     def __init__(self,
@@ -76,7 +77,7 @@ class PoseDetector:
             cv2.circle(img, (x2, y2), 15, (0, 0, 255), 2)
             cv2.circle(img, (x3, y3), 10, (0, 0, 255), cv2.FILLED)
             cv2.circle(img, (x3, y3), 15, (0, 0, 255), 2)
-            cv2.putText(img, str(int(angle)), (x2+20, y2+50), cv2.FONT_ITALIC, 1, (0, 255, 0), 2)
+            cv2.putText(img, str(int(angle)) + ' gradi', (x2 - 200, y2 + 50), cv2.FONT_ITALIC, 1, (0, 255, 0), 2)
 
         return angle
 
